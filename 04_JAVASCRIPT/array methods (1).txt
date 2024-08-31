@@ -1,0 +1,126 @@
+1 sort()
+
+->Sorting of an array (Numbers)
+
+var arr=[44,170,56,100,34,64,150,23,11,12,1];---case1
+
+
+console.log(arr.sort());(not followed) o/p - 1,100,11,12,150,170,23...
+
+
+
+console.log(arr.sort((a,b)=>a-b));//ascending order
+console.log(arr.sort((a,b)=>b-a));//descending order
+
+->Sorting of an array (String)
+
+var vehicle = ["Bus", "car", "bike", "cycle"];
+
+console.log(vehicle.sort()); //Bus,bike (A-Z,a-z)
+console.log(vehicle.reverse());
+
+
+2 map()
+ 
+create a new array by calling function for every array element
+
+
+//Return a new array with the square of all element values:
+
+ a=[10,11,12,13,14];
+
+ console.log(a.map(num=>num**2));
+
+3 filter() 
+
+create a new array with elements satisfy the condition given in an function
+
+eg:var a=[10,11,12,13,14,15,16,17,18,19,20];
+
+// print only even numbers
+
+
+console.log(a.filter(num=>num%2==0));
+
+4 reduce() 
+
+ function apply to all array elements and returns a single value(It will last value)
+
+5 reduceRight()
+
+function apply to all array elements and returns a single value(It will first value)
+
+
+eg:arr=[
+    [1,'chinnu',100],
+    [2,'minnu',200],
+    [3,'ponnu',100],
+    [4,'anu',300],
+]
+//who got the minimum value
+
+
+console.log(arr.reduce((n1,n2)=>n1[2]<n2[2]?n1:n2));//ponnu last value
+console.log(arr.reduceRight((n1,n2)=>n1[2]<n2[2]?n1:n2));//chinnu - first value
+
+6 find() - find the details of a specific item in the array and return the first occurrence of the item
+
+console.log(employee.find(emp=>emp[1]=='Laisha'));
+
+7 forEach() - helps to fetch each item (same as for loop)
+
+eg://1 display product name one by one
+
+
+products.forEach(products=>console.log(products[1]));
+
+8 some()- apply function and return true or false 
+
+
+//1 Is there any product can purchase by 20rs
+
+
+console.log(products.some(item=>item[2]<=20)); (if it is found then return true, else false)
+
+9 includes() - It returns true if the   item present in array 
+
+a=['max', 'mili', 'milan' ];
+
+//Is mili is present or not?
+console.log(a.includes('mili'));
+
+console.log(a.includes('Mili'));//case sensitive
+
+10 toUpperCase()
+
+converts the lower case to upper case
+
+str="Adacode";  
+
+ Array.from(str).map(char=>char.toUpperCase()).forEach(char=>console.log(char))
+
+11  Array.from() - To convert string to an array
+
+to find vowels in the words
+str="hai hellO";//variable
+vowels=['a','e','i','o','u','A','E','I','O','U'];//array
+Array.from(str).filter(char=>vowels.includes(char)).forEach(char=>console.log(char));
+
+12 flat() - It will flatten nested
+
+a=[
+    [10,50],
+    [20,60],
+    [1,5],
+    [15,25],
+    [3,8],
+    [100,500]
+]
+//1 print all numbers > 10 //50,20,60,15,100,500
+
+
+console.log(a.flat());
+
+console.log(a.flat().filter(num=>num>10));
+
+
